@@ -20,7 +20,7 @@ public class ByeServlet extends HttpServlet {
         resp.setContentType("text/html"); // 응답이 HTML 파일 형태
         PrintWriter out = resp.getWriter(); // 응답에 적을 내용을 담을 PrintWriter 객체를 불러오기
         out.println("<html><body>");
-        out.println("<h2>Bye, JW!!!!!</h2>");
+        out.println("<h2>ByeBye, JW!!!!!</h2>");
         out.println("</body></html>");
     }
 }
