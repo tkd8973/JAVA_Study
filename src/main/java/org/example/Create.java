@@ -5,10 +5,9 @@ import javax.servlet.*;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.*;
 import java.io.*;
-import java.util.List;
 
 @WebServlet("/Posting")
-public class MyServlet extends HttpServlet {
+public class Create extends HttpServlet {
     private static final long serialVersionUID = 1L;
     private EntityManagerFactory emf;
 

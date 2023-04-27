@@ -6,7 +6,7 @@ import javax.servlet.http.*;
 import java.io.*;
 import java.util.List;
 @WebServlet("/list")
-public class Main extends HttpServlet {
+public class Read extends HttpServlet {
     private static final long serialVersionUID = 1L;
     private EntityManagerFactory emf;
     @Override

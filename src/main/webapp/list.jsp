@@ -21,6 +21,7 @@
 					<th>번호</th>
 					<th>작성자</th>
 					<th>내용</th>
+					<th>수정</th>
 				</tr>
 			</thead>
 			<tbody>
@@ -33,13 +34,16 @@
 						<td><%= post.getID() %></td>
 						<td><%= post.getWRITER() %></td>
 						<td><%= post.getWRITING() %></td>
+						<td>
+							<button type="button" class="btn btn-sm btn-outline-secondary" onclick="location.href='update.jsp?id=<%= post.getID() %>">수정</button>
+						</td>
 					</tr>
 				<%
 					}
 				} else {
 				%>
 					<tr>
-						<td colspan="3" class="text-center">게시물이 없습니다.</td>
+						<td colspan="4" class="text-center">게시물이 없습니다.</td>
 					</tr>
 				<%
 				}
@@ -50,7 +54,4 @@
 	</div>
 	<!-- Bootstrap CDN -->
 	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
-	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
-</body>
-</html>
+	<script src="https://cdnjs.cloudflare.com
