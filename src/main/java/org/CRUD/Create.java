@@ -1,4 +1,4 @@
-package org.example;
+package org.CRUD;
 
 import javax.persistence.*;
 import javax.servlet.*;
@@ -6,7 +6,7 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.*;
 import java.io.*;
 
-@WebServlet("/Posting")
+@WebServlet("/Create")
 public class Create extends HttpServlet {
     private static final long serialVersionUID = 1L;
     private EntityManagerFactory emf;
@@ -33,12 +33,6 @@ public class Create extends HttpServlet {
 
         em.close();
 
-//        response.setContentType("text/html");
-//
-//        PrintWriter out = response.getWriter();
-//
-//        RequestDispatcher dispatcher = request.getRequestDispatcher("./index.jsp");
-//        dispatcher.forward(request, response);
         response.sendRedirect("./list");
     }
 

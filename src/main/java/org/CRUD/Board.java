@@ -1,4 +1,4 @@
-package org.example;
+package org.CRUD;
 
 import javax.persistence.Entity;
 import javax.persistence.Table;

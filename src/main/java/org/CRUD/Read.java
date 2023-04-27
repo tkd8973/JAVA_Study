@@ -1,4 +1,4 @@
-package org.example;
+package org.CRUD;
 import javax.persistence.*;
 import javax.servlet.*;
 import javax.servlet.annotation.WebServlet;

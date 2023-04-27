@@ -13,7 +13,7 @@
 	<div class="container mt-5">
 		<div class="row justify-content-center">
 			<div class="col-md-6">
-				<form method="post" action="Posting" class="border p-3 rounded">
+				<form method="post" action="Create" class="border p-3 rounded">
 					<h3 class="text-center mb-4">게시글 작성</h3>
 					<div class="form-group">
 						<label for="writer">작성자</label>
