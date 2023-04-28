@@ -3,42 +3,44 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <meta charset="UTF-8">
-    <title>파티 게시판</title>
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-    <!-- Custom CSS -->
-    <link rel="stylesheet" href="css/style.css">
+     <meta charset="UTF-8">
+        <title>게시판</title>
+        <style>
+            body {
+                background-image: url("https://i.gifer.com/64mE.gif");
+            }
+
+            .glow {
+                text-shadow: 0 0 10px #FF0000, 0 0 20px #FF7700, 0 0 30px #FFFF00, 0 0 40px #00FF00, 0 0 50px #00FFFF, 0 0 60px #0000FF, 0 0 70px #8B00FF;
+            }
+
+            .combined-btn {
+                background-color: #28a745;
+                border-color: #28a745;
+                text-shadow: 0 0 10px #FF0000, 0 0 20px #FF7700, 0 0 30px #FFFF00, 0 0 40px #00FF00, 0 0 50px #00FFFF, 0 0 60px #0000FF, 0 0 70px #8B00FF;
+                font-weight: bold;
+                font-size: 50px;
+                padding: 20px 50px;
+            }
+
+            .combined-btn:hover {
+                background-color: #218838;
+                border-color: #1e7e34;
+            }
+        </style>
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <a class="navbar-brand" href="#">파티 게시판</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav ml-auto">
-                <li class="nav-item active">
-                    <form action="list" method="GET" class="form-inline my-2 my-lg-0">
-                        <button type="submit" class="btn btn-link">목록 보기</button>
-                    </form>
-                </li>
-                <li class="nav-item">
-                    <a href="write.jsp" class="nav-link">글 작성</a>
-                </li>
-            </ul>
-        </div>
-    </nav>
-    <div class="container my-5">
-        <div class="jumbotron">
-            <h1 class="display-4">파티 게시판에 오신 것을 환영합니다!</h1>
-            <p class="lead">여기에서는 파티 이야기를 자유롭게 나눌 수 있습니다.</p>
-            <hr class="my-4">
-            <p>새로운 이야기를 공유해주세요!</p>
-            <a class="btn btn-primary btn-lg" href="write.jsp" role="button">글 작성하기</a>
-        </div>
+    <div class="container">
+        <form action="list" method="GET">
+            <div class="text-center mt-5">
+                <button type="submit" class="combined-btn">
+                  <span class="glow">⚡번개 모임⚡</span>
+                </button>
+            </div>
+        </form>
     </div>
-
     <!-- Bootstrap JS -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>

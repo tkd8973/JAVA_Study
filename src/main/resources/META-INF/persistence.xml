@@ -10,7 +10,7 @@
         <properties>
             <property name="javax.persistence.jdbc.driver" value="com.mysql.cj.jdbc.Driver" />
             <property name="javax.persistence.jdbc.url" value="jdbc:mysql://aws.connect.psdb.cloud/mydb?sslMode=VERIFY_IDENTITY" />
-            <property name="javax.persistence.jdbc.user" value="s3qpv3f5sf35n9sltobc"/>
+            <property name="javax.persistence.jdbc.user" value="qxj7ir2lnr7ja6licntj"/>
             <property name="javax.persistence.jdbc.password" value="" />
             <property name="hibernate.dialect" value="org.hibernate.dialect.MySQL8Dialect" />
             <property name="hibernate.hbm2ddl.auto" value="none" />
