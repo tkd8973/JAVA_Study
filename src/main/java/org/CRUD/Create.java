@@ -5,6 +5,8 @@ import javax.servlet.*;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.*;
 import java.io.*;
+import java.sql.Timestamp;
+import java.text.SimpleDateFormat;
 
 @WebServlet("/Create")
 public class Create extends HttpServlet {
@@ -18,16 +20,24 @@ public class Create extends HttpServlet {
     }
 
     @Override
-    public void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+    public void doPost(HttpServletRequest request, HttpServletResponse response)
+            throws ServletException, IOException {
         request.setCharacterEncoding("UTF-8");
-        String WRITER = request.getParameter("WRITER");
-        String WRITING = request.getParameter("WRITING");
+
+        String writer = request.getParameter("WRITER");
+        String writing = request.getParameter("WRITING");
+
+        java.util.Date now = new java.util.Date();
+        Timestamp timestamp = new Timestamp(now.getTime());
+        SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd HH:mm");
+        String date = sdf.format(timestamp);
+
         EntityManager em = emf.createEntityManager();
 
         em.getTransaction().begin();
 
-        Board Poster = new Board(WRITER, WRITING);
-        em.persist(Poster);
+        Board post = new Board(writer, writing, timestamp);
+        em.persist(post);
 
         em.getTransaction().commit();
 

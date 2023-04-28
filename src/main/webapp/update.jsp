@@ -27,7 +27,7 @@ pageEncoding="UTF-8"%>
 			<input type="hidden" name="id" value="${param.id}">
 			<button type="submit" class="btn btn-primary">수정하기</button>
 		</form>
-		<button type="button" class="btn btn-secondary mt-3" onclick="location.href='list.jsp'">취소</button>
+		<button type="button" class="btn btn-secondary mt-3" onclick="history.back()">취소</button>
 	</div>
 	<!-- Bootstrap CDN -->
 	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>

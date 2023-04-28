@@ -3,15 +3,20 @@ package org.CRUD;
 import javax.persistence.Entity;
 import javax.persistence.Table;
 import javax.persistence.*;
+import java.sql.Timestamp;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 
 @Entity
 @Table(name = "post")
-// Table : 'id' 'WRITER' 'WRITING'
 public class Board {
 
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Id
     private int Id;
+
+    @Column(name = "dt", nullable = false)
+    private Timestamp dt;
 
     @Column(name = "WRITER", nullable = false, length = 10)
     private String WRITER;
@@ -19,10 +24,12 @@ public class Board {
     @Column(name = "WRITING", nullable = false, length = 100)
     private String WRITING;
 
+
     public Board() {}
-    public Board(String WRITER, String WRITING){
+    public Board(String WRITER, String WRITING, Timestamp  dt){
         this.WRITER = WRITER;
         this.WRITING = WRITING;
+        this.dt = dt;
     }
     public int getID() {
         return Id;
@@ -42,5 +49,10 @@ public class Board {
     public void setWRITING(String WRITING) {
         this.WRITING = WRITING;
     }
-
+    public Timestamp getDt() {
+        return dt;
+    }
+    public void setDt(Timestamp dt) {
+        this.dt = dt;
+    }
 }
