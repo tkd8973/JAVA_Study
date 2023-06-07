@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <title>Profile</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+        crossorigin="anonymous">
+</head>
+<body>
+<div class="container">
+  <h1>Profile</h1>
+  <table class="table">
+    <tbody>
+    <tr>
+      <th scope="row">Username</th>
+      <td th:text="${account.username}"></td>
+    </tr>
+    <tr>
+      <th scope="row">Name</th>
+      <td th:text="${account.name}"></td>
+    </tr>
+    <tr>
+      <th scope="row">Address</th>
+      <td th:text="${account.address}"></td>
+    </tr>
+    <tr>
+      <th scope="row">Email</th>
+      <td th:text="${account.email}"></td>
+    </tr>
+    </tbody>
+  </table>
+  <form th:action="@{/profile/delete}" method="get">
+    <button type="submit" class="btn btn-danger">회원 탈퇴</button>
+  </form>
+</div>
+
+</body>
+</html>
