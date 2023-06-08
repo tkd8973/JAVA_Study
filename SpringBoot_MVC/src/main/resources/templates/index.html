@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<!-- thymeleaf를 사용할 예정 , 사용중 이라는 표시-->
+<html xmlns:th="html://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <!--브라우저의 타이틀-->
+    <title>티셔츠 목록</title>
+</head>
+<body>
+    <!-- 타임리프로 인식되고 있기 때문에 재실행 해야 수정내용 반영 -->
+    <!-- thml://localhost:8080 -->
+    <h1>티셔츠 리스트</h1>
+    <p th:text="${message2}" />
+
+    <table border="1" th:if="${!tShirts.isEmpty()}">
+        <thead>
+            <tr>
+                <th>번호</th>
+                <th>색상</th>
+                <th>로고</th>
+                <th>사이즈</th>
+                <th>가격</th>
+                <th>기능</th>
+            </tr>
+        </thead>
+        <tbody>
+        <!-- 모든 요소를 반복해서 출력-->
+            <tr th:each="tShirt:${tShirts}">
+                <td th:text="${tShirt.id}"/>
+                <td th:text="${tShirt.color}"/>
+                <td th:text="${tShirt.logo}"/>
+                <td th:text="${tShirt.size}"/>
+                <td th:text="${tShirt.price}"/>
+                <td>
+                    <button>
+                        <a th:href="@{/showUpdateTShirtForm/{id}(id=${tShirt.id})}">수정</a>
+                    </button>
+                    <button>
+                        <a th:href="@{/deleteTShirt/{id}(id=${tShirt.id})}">삭제</a>
+                    </button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <p th:unless="${!tShirts.isEmpty()}">등록된 티셔츠가 없다용</p>
+    <button type="button" onclick="location.href = '/showNewTShirtForm'">추가하기</button>
+</body>
+</html>
