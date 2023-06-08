@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<!-- thymeleaf를 사용할 예정 , 사용중 이라는 표시-->
+<html xmlns:th="html://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <!--브라우저의 타이틀-->
+    <title>티셔츠 추가</title>
+</head>
+<body>
+    <!-- 타임리프로 인식되고 있기 때문에 재실행 해야 수정내용 반영 -->
+    <!-- html://localhost:8080 -->
+    <h1>티셔츠 추가</h1>
+    <form th:object="${tShirt}" method="post" action="/saveTShirt">
+    <!-- color,logo,size,price -->
+        <div>
+            <label>색상 : </label>
+            <input name="color" th:value="${tShirt.color}">
+        </div>
+        <div>
+            <label>로고 : </label>
+            <input name="logo" th:value="${tShirt.logo}">
+        </div>
+        <div>
+            <label>사이즈 : </label>
+            <input name="size" th:value="${tShirt.size}">
+        </div>
+        <div>
+            <label>가격 : </label>
+            <input name="price" th:value="${tShirt.price}">
+        </div>
+        <br>
+        <!-- submit : form에 있는 데이터 내용으로 요청 -->
+        <button type="submit">추가</button>
+        <button type="button" onclick="location.href='/'">뒤로가기</button>
+    </form>
+
+</body>
+</html>
